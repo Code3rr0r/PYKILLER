@@ -1,2 +1,2 @@
-# pygame-killer
+# PYKILLER
 do not use this code
