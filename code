@@ -1,0 +1,12 @@
+import pygame
+
+def evil_pygame_cpu():
+    pygame.init()
+    screen = pygame.display.set_mode((640, 480))
+    pygame.display.set_caption("CPU Killer")
+
+    while True:
+        screen.fill((0, 255, 0))  # Fill screen with green
+        pygame.display.flip()  # Update the screen with no delay or framerate cap
+
+evil_pygame_cpu()
