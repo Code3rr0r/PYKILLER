@@ -73,7 +73,7 @@ By participating in **PYKILLER**, you agree to adhere to our Code of Conduct. We
 
 For questions or support, please open an issue on the repository or contact us at:
 
-- **Email**: soon
+- **Email**: PYKILLER@teleworm.us
 - **GitHub**: [https://github.com/Code3rr0r/pykiller](https://github.com/Code3rr0r/pykiller)
 
 ---
