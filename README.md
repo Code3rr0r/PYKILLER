@@ -1,2 +1,2 @@
 # PYKILLER
-do not use this code
+do not use this file
