@@ -28,6 +28,9 @@ def check_resources():
         if cpu_usage > MAX_CPU_USAGE or memory_usage > MAX_MEMORY_USAGE:
             logger.info("SAFE_MODE activated: Slowing down to prevent system overload.")
             time.sleep(1)  # Introduce a slight delay to reduce load
+        else:
+            # If resource usage is back to normal, adjust accordingly
+            logger.info("SAFE_MODE deactivated: Resuming normal operation.")
 
 # Stress-test function to simulate CPU and memory usage
 def stress_test():
