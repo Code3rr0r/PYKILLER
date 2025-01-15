@@ -48,8 +48,11 @@ def stress_test():
     pygame.init()
     screen = pygame.display.set_mode((800, 600))
 
+    max_iterations = 100  # Set a max iteration count to prevent infinite loops
+    current_iteration = 0
+
     try:
-        while True:
+        while current_iteration < max_iterations:
             # Draw circles to simulate heavy graphics processing and CPU usage
             for _ in range(100000):  # Adjust the range for desired stress level
                 pygame.draw.circle(screen, (255, 0, 0), (400, 300), 50)
@@ -61,6 +64,11 @@ def stress_test():
             # Add a small delay between iterations to prevent system lockups in safe mode
             if SAFE_MODE:
                 time.sleep(0.5)
+
+            current_iteration += 1
+            logger.info(f"Iteration {current_iteration}/{max_iterations}")
+
+        logger.info(f"Stress test completed after {max_iterations} iterations.")
 
     except KeyboardInterrupt:
         logger.info("Stress test interrupted by user.")
